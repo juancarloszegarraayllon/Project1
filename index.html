@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title>Music Up</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+
+	<body>
+		<div class="container-fluid"> <!-- Main content -->
+			<div class="row header"> <!-- Header row -->
+				<div class="row"> <!-- Mini Logo -->
+					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> <!--logo -->
+						<img id="smallLogo" class="img-fluid" alt="MusicUp" src="assets/images/favicon.png">
+					</div>
+				</div> 
+
+				<div class="row"> <!-- large logo -->
+					<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4"></div> <!--spacer -->
+					<div class="col-xs-8 col-sm-8 col-md-4 col-lg-4"> <!--search -->
+						<div class="searchquery1"><img id="logo" class="img-fluid" alt="MusicUp" src="assets/images/musicUp.png"></div>
+					</div>
+					<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4"></div> <!--spacer -->
+				</div> <!-- large logo row -->
+
+				<div class="row"> <!-- search bar -->
+					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> <!--spacer -->
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 searchbar"> <!--search -->
+						<div id="input-styling-address">
+						  <input type="text" id="search-input" placeholder="Would you like to find music events in another city?">
+						  <button id="search"><img alt="GO" src="assets/images/search.png"></button>
+						</div>
+					</div>
+					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div> <!--spacer -->
+				</div> <!-- search row -->
+			</div> <!-- header row -->
+		</div> <!-- container-fluid -->
+
+		<div class="container">
+			<div class="row contents"> <!-- all contents -->
+				<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3"> <!-- sidebar -->
+					<div class="sidebar">
+						<div class="sidebar1">
+							<div class="row"> <!-- search functions -->
+								<div class="searchquery2"><h2>Miami, FL</h2></div>
+								<button id="save">save search</button>
+								<button id="clear">clear searches</button>
+								<div class="row">
+									<div id="map"></div>
+								</div>
+							</div> <!-- search functions -->
+
+							<div class="row"> <!-- saved searches -->
+								<div id="savedSearches"></div>
+							</div> <!-- saved searches row -->
+						</div> <!-- sidebar -->
+					
+						<div class="sidebar2">
+							<div class="row"> <!-- sidebar links -->
+								<h3>Local Resources</h3>
+								<a class="navlink" href="#eventstitle">Upcoming Music Events</a>
+								<a class="navlink1" href="#foodtitle">Nearby Restaurants</a>
+								<a class="navlink" href="#newstitle">Local News</a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- sidebar column -->
+
+				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9"> <!-- main content -->
+					<div class="row main"> <!-- main content -->
+
+						<div class="row">
+							<h2 id="eventstitle">Upcoming Music Events</h2>
+							<div id="events"></div>
+						</div>			
+
+						<div class="row">
+							<h2 id="foodtitle">Nearby Restaurants</h2>
+							<div id="food"></div>
+						</div>
+
+						<div class="row">
+							<h2 id="newstitle">Local News</h2>
+							<div id="news"></div>
+						</div>	
+
+					</div> <!-- main content row -->
+
+					<div class="row"> <!-- credits -->
+						<p class="copyRight">&copy; 2018 MusicUp<br>Powered by Eventbrite, Google Maps Geocoding, Google Maps JavaScript, Google Places, Algolia Places, Flickr, and News API.</p>
+					</div> <!-- credits row -->
+				</div> <!-- main content column -->
+
+
+			</div> <!-- all contents row -->
+		</div> <!-- container -->
+		
+		<!-- JAVASCRIPT AND JQUERY -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/places.js@1.4.18"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+		<script src="assets/javascript/javascript.js"></script>
+	</body>
+</html>
