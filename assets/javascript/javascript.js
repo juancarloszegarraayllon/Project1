@@ -186,12 +186,15 @@ $("#clear").on("click", function() {
 $("#savedSearches").on("click", ".searchbutton", function() {
     // setting the search query
     search = $(this).attr("query");
+    $("#search-input").val(search);
+    $("#food").hide();
+    $("#foodtitle").hide();
+    $(".navlink1").hide();
 
     // run search function
     resetThenSearch();
     googleMapsGeocoding();
     googleMapsJavascript();
-    
 });
 
 // Reexecutes search when saved search button is clicked
